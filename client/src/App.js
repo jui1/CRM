@@ -1,12 +1,18 @@
 import React from 'react';
+import EnquiryForm from './component/EnquiryForm';
 
-const Admin = () => {
+
+
+const App = () => {
     return (
         <div>
-            <h2>Admin Dashboard</h2>
-            
+            <h1>CRM System</h1>
+
+
+            <EnquiryForm />
+
         </div>
     );
 };
 
-export default Admin;
+export default App;
