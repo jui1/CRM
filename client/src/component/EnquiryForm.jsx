@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../EnquiryForm.css'; 
 
 function EnquiryForm() {
   const [formData, setFormData] = useState({
@@ -40,38 +41,37 @@ function EnquiryForm() {
   };
 
   return (
-    <div>
+    <div className="Container">
       <h2>Enquiry Form</h2>
       <form onSubmit={handleSubmit}>
         <input 
-        type="text"
-         name="name" 
-         value={formData.name}
+          type="text"
+          name="name" 
+          value={formData.name}
           onChange={handleChange}
-           placeholder="Name"
-            />
-
+          placeholder="Name"
+        />
         <input
-         type="text" 
-         name="mobile"
+          type="text" 
+          name="mobile"
           value={formData.mobile} 
           onChange={handleChange}
-           placeholder="Mobile Number"
-            />
-        <input type="email"
-         name="email"
+          placeholder="Mobile Number"
+        />
+        <input 
+          type="email"
+          name="email"
           value={formData.email} 
           onChange={handleChange}
-           placeholder="Email ID" 
-           />
+          placeholder="Email ID" 
+        />
         <textarea
-         name="query"
+          name="query"
           value={formData.query} 
           onChange={handleChange} 
-          placeholder="Query">
-
-          </textarea>
-       <div><button type="submit">Submit</button></div> 
+          placeholder="Query"
+        ></textarea>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -1,0 +1,55 @@
+.Container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white; 
+  }
+  
+  .Container h2 {
+    color: white; 
+  }
+  
+  .Container form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Container input
+   {
+   
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+   
+    color: white; 
+  }
+  
+  .Container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Container button:hover {
+    background-color: #0e47aa;
+  }
+  .Container textarea{
+   
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color:white;;
+    color: rgb(6, 5, 5); 
+
+  }
