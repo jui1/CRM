@@ -22,6 +22,10 @@ const enquirySchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    status:
+     { type: String,
+     enum: ['New', 'Pending', 'Completed'],
+     default: 'New' }
 });
 
 module.exports = mongoose.model('Enquiry', enquirySchema);

@@ -6,7 +6,7 @@ function EnquiryForm() {
     name: '',
     mobile: '',
     email: '',
-    query: ''
+    message: ''
   });
 
   const handleChange = (e) => {
@@ -25,15 +25,15 @@ function EnquiryForm() {
       });
       if (response.ok) {
         console.log('Form submitted successfully');
-       
         setFormData({
           name: '',
           mobile: '',
           email: '',
-          query: ''
+          message: ''
         });
       } else {
-        console.error('Failed to submit form:', response.statusText);
+        const errorData = await response.json();
+        console.error('Failed to submit form:', errorData.message);
       }
     } catch (error) {
       console.error('Failed to submit form:', error.message);
@@ -66,8 +66,8 @@ function EnquiryForm() {
           placeholder="Email ID" 
         />
         <textarea
-          name="query"
-          value={formData.query} 
+          name="message" 
+          value={formData.message} 
           onChange={handleChange} 
           placeholder="Query"
         ></textarea>

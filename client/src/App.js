@@ -1,18 +1,23 @@
 import React from 'react';
-import EnquiryForm from './component/EnquiryForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EnquiryForm from "./component/EnquiryForm.jsx";
+
+import Admin from './component/Admin';
 
 
 
-const App = () => {
-    return (
-        <div>
-            <h1>CRM System</h1>
-
-
-            <EnquiryForm />
-
-        </div>
-    );
-};
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<EnquiryForm />} />
+          <Route path="/admin" element={<Admin />} />
+         
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
