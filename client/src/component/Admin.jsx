@@ -15,7 +15,7 @@ function Admin() {
   const filteredUsers = users.filter(user => user.status === filter);
 
   return (
-    <div className="admin-container">
+    <div className="container">
       <div className="button-group">
         <h2 className='text'>Admin Console</h2>
         <button onClick={() => setFilter('New')}>New</button>
