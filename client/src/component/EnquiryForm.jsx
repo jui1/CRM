@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../EnquiryForm.css'; 
+import './EnquiryForm.css'; 
 
 function EnquiryForm() {
   const [formData, setFormData] = useState({
